@@ -1,0 +1,142 @@
+{
+  "patterns": {
+    "full_stack_app": {
+      "description": "Complete web application from requirements to deployment",
+      "sequence": [
+        {
+          "phase": "Planning",
+          "agents": [
+            "requirements-analyst",
+            "system-architect"
+          ],
+          "execution": "sequential"
+        },
+        {
+          "phase": "Development",
+          "agents": [
+            "api-architect",
+            "database-architect",
+            "frontend-developer",
+            "backend-developer"
+          ],
+          "execution": "parallel"
+        },
+        {
+          "phase": "Testing",
+          "agents": [
+            "test-automator",
+            "qa-specialist"
+          ],
+          "execution": "parallel"
+        },
+        {
+          "phase": "Review",
+          "agents": [
+            "code-reviewer",
+            "security-auditor",
+            "accessibility-auditor"
+          ],
+          "execution": "parallel"
+        },
+        {
+          "phase": "Deployment",
+          "agents": [
+            "devops-engineer",
+            "deployment-engineer"
+          ],
+          "execution": "sequential"
+        }
+      ],
+      "estimated_time": "3-4 hours",
+      "estimated_tokens": 75000,
+      "success_rate": "92%"
+    },
+    "mobile_app": {
+      "description": "Native mobile app from design to app store",
+      "sequence": [
+        {
+          "phase": "UX Design",
+          "agents": [
+            "mobile-ux-engineer"
+          ],
+          "execution": "single"
+        },
+        {
+          "phase": "UI Implementation",
+          "agents": [
+            "mobile-ui-implementer",
+            "mobile-ui-implementer",
+            "mobile-ui-implementer"
+          ],
+          "execution": "parallel",
+          "note": "3 different theme variations"
+        },
+        {
+          "phase": "Native Conversion",
+          "agents": [
+            "html-to-native-converter"
+          ],
+          "execution": "single"
+        },
+        {
+          "phase": "Testing",
+          "agents": [
+            "test-automator",
+            "accessibility-auditor"
+          ],
+          "execution": "parallel"
+        }
+      ],
+      "estimated_time": "2-3 hours",
+      "estimated_tokens": 45000,
+      "success_rate": "88%"
+    },
+    "hotfix": {
+      "description": "Rapid production issue resolution",
+      "sequence": [
+        {
+          "phase": "Triage",
+          "agents": [
+            "incident-commander"
+          ],
+          "execution": "single"
+        },
+        {
+          "phase": "Debug",
+          "agents": [
+            "debugger",
+            "performance-engineer"
+          ],
+          "execution": "parallel"
+        },
+        {
+          "phase": "Fix",
+          "agents": [
+            "backend-developer",
+            "frontend-developer"
+          ],
+          "execution": "conditional"
+        },
+        {
+          "phase": "Validate",
+          "agents": [
+            "test-automator",
+            "pre-commit-reviewer"
+          ],
+          "execution": "sequential"
+        },
+        {
+          "phase": "Deploy",
+          "agents": [
+            "deployment-engineer"
+          ],
+          "execution": "single"
+        }
+      ],
+      "estimated_time": "30-60 minutes",
+      "estimated_tokens": 25000,
+      "success_rate": "94%",
+      "priority": "critical"
+    }
+  }
+}

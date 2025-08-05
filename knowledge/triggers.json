@@ -1,0 +1,19 @@
+{
+  "automatic_triggers": [
+    {
+      "condition": "file_size > 500 lines",
+      "action": "delegate_to_gemini",
+      "mandatory": true
+    },
+    {
+      "condition": "project_type == \"mobile\"",
+      "action": "start_with_mobile_ux_engineer",
+      "reason": "UX structure must come before styling"
+    },
+    {
+      "condition": "production_deployment",
+      "action": "require_governance_approval",
+      "mandatory": true
+    }
+  ]
+}

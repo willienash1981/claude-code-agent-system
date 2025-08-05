@@ -1,0 +1,37 @@
+{
+  "quick_lookups": {
+    "mobile_app": {
+      "agents": [
+        "mobile-ux-engineer",
+        "mobile-ui-implementer",
+        "html-to-native-converter"
+      ],
+      "notes": "UX MUST come first (no styling), UI adds visual design, converter creates native code"
+    },
+    "web_app": {
+      "agents": [
+        "requirements-analyst",
+        "system-architect",
+        "frontend-developer",
+        "backend-developer"
+      ],
+      "notes": "Requirements first, then architecture, then parallel development"
+    },
+    "api_creation": {
+      "agents": [
+        "api-architect",
+        "backend-developer",
+        "test-automator"
+      ],
+      "notes": "Design API first, implement with tests"
+    },
+    "bug_fix": {
+      "agents": [
+        "incident-commander",
+        "debugger",
+        "deployment-engineer"
+      ],
+      "notes": "Triage, debug, deploy - rapid response"
+    }
+  }
+}
