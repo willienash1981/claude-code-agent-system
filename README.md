@@ -1,12 +1,26 @@
-# Claude Code Sub-Agent System
+# Claude Code Agent System - Self-Maintaining
 
-A comprehensive, production-ready sub-agent orchestration system for Claude Code featuring 66+ specialized agents, self-maintaining architecture, and enterprise-grade governance.
+A self-maintaining AI orchestration system for Claude Code with 66+ specialized agents that evolve and improve automatically. Features weekly auto-updates, continuous learning, and enterprise-grade governance.
+
+## 🔄 What Makes It Self-Maintaining?
+
+This system doesn't just run - it **evolves**:
+
+- **Weekly Auto-Updates**: The `agent-ecosystem-manager` updates all components automatically
+- **Continuous Learning**: `best-practices-researcher` discovers new techniques and patterns
+- **Auto-Creation**: `meta-agent-creator` builds new agents as needs arise
+- **Performance Optimization**: Underperforming agents are automatically improved
+- **Self-Documentation**: All changes are tracked and documented automatically
+- **Community Learning**: Incorporates improvements from user experiences
+
+No manual maintenance required - the system keeps itself cutting-edge!
 
 ## 🌟 Features
 
+- **Self-Maintaining Architecture** - Automatically updates and improves weekly
 - **66+ Specialized Agents** covering the entire software development lifecycle
-- **11 Meta-Agents** for system management and self-maintenance
-- **Self-Maintaining Architecture** with automated weekly updates
+- **11 Meta-Agents** for system management and autonomous evolution
+- **Continuous Learning** - Discovers and implements best practices automatically
 - **Proven Workflow Patterns** for common development scenarios
 - **Enterprise Governance** with human-in-the-loop enforcement
 - **Token Optimization** with intelligent model selection and delegation
@@ -187,3 +201,5 @@ MIT License - See [LICENSE](LICENSE) file for details.
 **Version**: 2.1 - Self-Maintaining System with Automated Evolution
 
 **Status**: Production Ready ✅
+
+**Key Feature**: This system maintains and improves itself automatically!
