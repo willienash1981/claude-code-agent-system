@@ -19,7 +19,7 @@ A comprehensive, production-ready sub-agent orchestration system for Claude Code
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/claude-code-agent-system.git
+git clone https://github.com/willienash1981/claude-code-agent-system.git
 cd claude-code-agent-system
 ```
 
