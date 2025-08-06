@@ -18,13 +18,6 @@
   ],
   "slash_commands": [
     {
-      "command": "/maintenance",
-      "description": "Complete system maintenance workflow",
-      "agent": "maintenance-orchestrator",
-      "example": "/maintenance - Executes comprehensive system maintenance (30-60 min, $2-4)",
-      "category": "system"
-    },
-    {
       "command": "/visual-testing",
       "description": "Trigger comprehensive visual testing workflow",
       "agent": "visual-testing-orchestrator", 
