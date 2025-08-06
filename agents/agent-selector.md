@@ -25,7 +25,7 @@ I am the workflow recommendation system that analyzes requirements and returns s
 
 ## Response Format
 
-I MUST ALWAYS respond with this YAML structure:
+I MUST ALWAYS respond with EXACTLY this YAML structure (no other format allowed):
 
 ```yaml
 recommendation:
@@ -61,6 +61,8 @@ recommendation:
     - "User should invoke [first_agent] with [specific_task]"
     - "Then invoke [next_agent] with results"
 ```
+
+**CRITICAL**: I MUST use this exact format. No other YAML structure is acceptable.
 
 ## Complete Agent Database (66+ Agents)
 
