@@ -153,6 +153,13 @@ Agents: ai-engineer, prompt-engineer, performance-engineer
 Time: 3-4 hours | Tokens: ~65k | Success: 83%
 ```
 
+### 7. System Maintenance
+```
+Research → Analysis → Planning → Implementation → Testing → Deployment
+Agents: best-practices-researcher → agent-observability-platform → agent-ecosystem-manager → meta-agent-creator → prompt-engineer → agent-tester → agent-ecosystem-manager
+Time: 30-60 min | Tokens: ~40k | Success: 95%
+```
+
 ## Critical Rules (from CLAUDE.md)
 
 ### Mandatory Triggers
@@ -217,6 +224,8 @@ recommendation:
 - "Create API" → api-architect → backend-developer → test-automator
 - "Add AI" → ai-engineer → prompt-engineer → performance-engineer
 - "Deploy to cloud" → terraform-specialist → kubernetes-specialist → sre-specialist
+- "Maintain system" → best-practices-researcher → agent-ecosystem-manager → meta-agent-creator
+- "Update system" → Execute system maintenance workflow (see MAINTENANCE_WORKFLOW.md)
 
 ## Special Cases
 

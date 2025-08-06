@@ -2,30 +2,38 @@
 
 🎉 **PRODUCTION READY**: A comprehensive AI orchestration system for Claude Code with **66+ specialized agents** covering every aspect of software development and business operations. Features self-maintaining architecture, automated evolution, and enterprise-grade governance.
 
-## 🔄 What Makes It Self-Maintaining?
+## 🔄 Manual Self-Maintenance
 
-This system doesn't just run - it **evolves**:
+This system **can maintain and update itself** when triggered by a simple prompt:
 
-- **Weekly Auto-Updates**: The `agent-ecosystem-manager` updates all components automatically
-- **Continuous Learning**: `best-practices-researcher` discovers new techniques and patterns
-- **Auto-Creation**: `meta-agent-creator` builds new agents as needs arise
-- **Performance Optimization**: Underperforming agents are automatically improved
-- **Self-Documentation**: All changes are tracked and documented automatically
-- **Community Learning**: Incorporates improvements from user experiences
+**Trigger**: `"Execute system maintenance workflow for the Claude Code Agent System"`
 
-No manual maintenance required - the system keeps itself cutting-edge!
+**How it works**:
+- Uses existing specialized agents in coordinated workflow
+- **best-practices-researcher** finds latest improvements  
+- **agent-ecosystem-manager** coordinates system updates
+- **meta-agent-creator** builds new agents for gaps
+- **agent-tester** validates all changes
+- Updates are tested, documented, and released automatically
+
+**Benefits**:
+- ✅ Human-triggered with full oversight
+- ✅ No redundant capabilities - uses existing agents
+- ✅ Comprehensive system improvements in 30-60 minutes  
+- ✅ Maintains architectural integrity
+- ✅ Results in updated system with latest best practices
 
 ## 🌟 Complete Agent Ecosystem
 
 - **🎯 Total Coverage**: 66+ specialized agents covering every domain
-- **🔄 Self-Maintaining Architecture** - Automatically updates and improves weekly  
-- **🤖 11 Meta-Agents** for system management and autonomous evolution
-- **📚 Continuous Learning** - Discovers and implements best practices automatically
-- **🚀 Proven Workflow Patterns** for common development scenarios
+- **🔄 Manual Self-Maintenance** - Update system with a simple trigger prompt
+- **🤖 11 Meta-Agents** for system management and coordinated workflows  
+- **📚 Intelligent Workflows** - Proven patterns for any development scenario
+- **🚀 Coordinated Execution** - Agents work together seamlessly
 - **🏢 Enterprise Governance** with human-in-the-loop enforcement
 - **💰 Token Optimization** with intelligent model selection and delegation
 - **📊 Comprehensive Monitoring** with real-time dashboards
-- **🔧 Automatic Failure Recovery** with retry escalation and rollback
+- **🔧 Failure Recovery** with retry escalation and coordination
 
 ### Agent Categories (66+ Total)
 
