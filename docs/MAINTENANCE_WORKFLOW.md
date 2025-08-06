@@ -1,7 +1,8 @@
 # System Maintenance Workflow
 
-## Simple Trigger Prompt
-**"Execute system maintenance workflow for the Claude Code Agent System"**
+## Trigger Options
+- **Slash Command**: `/maintenance` (in Claude Code)
+- **Traditional Prompt**: `"Execute system maintenance workflow for the Claude Code Agent System"`
 
 ## Workflow Description
 This workflow uses existing agents in sequence to perform comprehensive system maintenance, updates, and improvements without creating redundant capabilities.
@@ -40,7 +41,7 @@ step_4:
 step_5:
   agent: "system-evaluator"
   task: "Apply common sense validation to all proposed changes and improvements"
-  purpose: "Prevent well-intentioned changes from breaking the working system"
+  purpose: "CRITICAL SAFETY GATE - Prevent well-intentioned changes from breaking the working system"
   output: "Approved, rejected, or modified proposals with detailed rationale"
 ```
 
@@ -80,71 +81,13 @@ step_10:
   output: "Updated documentation, Git commits, and new release"
 ```
 
-### Phase 2: Planning & Coordination  
-```yaml
-step_3:
-  agent: "agent-ecosystem-manager"
-  task: "Review research findings and performance data, create improvement plan"
-  purpose: "Coordinate system-wide improvements and maintain architectural integrity" 
-  output: "System improvement plan and priority list"
-
-step_4:
-  agent: "meta-agent-creator"
-  task: "Identify gaps where new agents are needed based on improvement plan"
-  purpose: "Determine if new specialized agents should be created"
-  output: "New agent specifications or modification requirements"
-
-step_5:
-  agent: "system-evaluator"
-  task: "Apply common sense validation to all proposed changes and improvements"
-  purpose: "Prevent well-intentioned changes from breaking the working system"
-  output: "Approved, rejected, or modified proposals with detailed rationale"
-```
-
-### Phase 3: Implementation
-```yaml
-step_6:
-  agent: "prompt-engineer"
-  task: "Optimize existing agent prompts based on APPROVED improvements only"
-  purpose: "Improve agent performance using validated enhancements"
-  output: "Updated agent specifications with enhanced prompts"
-
-step_7:
-  agent: "meta-agent-creator"  
-  task: "Create APPROVED new agents only (rejected proposals are not implemented)"
-  purpose: "Extend system capabilities for validated requirements only"
-  output: "New agent files and specifications for approved agents"
-
-step_8:
-  agent: "code-reviewer"
-  task: "Review all APPROVED agent modifications for quality and consistency"
-  purpose: "Ensure high quality and maintain system standards"
-  output: "Validated agent updates and quality assessment"
-```
-
-### Phase 4: Testing & Deployment
-```yaml
-step_9:
-  agent: "agent-tester"
-  task: "Test all APPROVED modified and new agents for functionality"
-  purpose: "Validate system works properly after validated updates"
-  output: "Test results and validation report"
-
-step_10:
-  agent: "agent-ecosystem-manager"
-  task: "Deploy APPROVED and TESTED changes, update system documentation, commit changes, and create release"
-  purpose: "Deploy validated improvements and update system version"
-  output: "Updated documentation, Git commits, and new release"
-```
-
 ## Implementation Instructions
 
 ### For User:
-1. Copy this exact phrase: **"Execute system maintenance workflow for the Claude Code Agent System"**
-2. Paste into Claude Code
-3. The master-orchestrator will coordinate the entire workflow
-4. Each agent will execute in sequence automatically
-5. Total time: 30-60 minutes depending on scope of updates
+1. **Option 1**: Type `/maintenance` in Claude Code
+2. **Option 2**: Copy and paste: `"Execute system maintenance workflow for the Claude Code Agent System"`
+3. The workflow will execute in sequence automatically
+4. Total time: 30-60 minutes depending on scope of updates
 
 ### Expected Outcomes:
 - ✅ System updated with latest industry best practices
@@ -167,22 +110,6 @@ step_10:
 - **No Sub-Agent Calls**: Workflow orchestrated at user level
 - **Proper Sequencing**: Logical flow from research to implementation
 - **Human Oversight**: User initiates and monitors the process
-
-## Alternative Shorter Workflows
-
-### Quick Health Check:
-```
-"Use agent-observability-platform to assess system health, then use agent-ecosystem-manager to address any critical issues"
-```
-
-### Research Only:
-```
-"Use best-practices-researcher to identify latest development trends that could improve our agent system"
-```
-
-### Create New Agent:
-```
-"Use meta-agent-creator to design and create a new agent for [specific capability gap]"
-```
+- **Safety Gate**: system-evaluator prevents breaking changes
 
 This workflow pattern enables true system self-maintenance while respecting the existing agent architecture and avoiding redundancy.
