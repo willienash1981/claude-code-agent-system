@@ -20,10 +20,10 @@ This system **can maintain and update itself** using simple slash commands:
 
 ### **⚡ Commands**
 - **`/maintenance`** - Complete system maintenance workflow (30-60 min, $2-4)
-- **`/visual`** - Comprehensive visual testing with real authentication and production-like data
+- **`/visual-testing`** - Comprehensive visual testing with real authentication and production-like data
 
 ### **🎯 Visual Testing System**
-The `/visual` command triggers the advanced Visual Loop Testing System:
+The `/visual-testing` command triggers the advanced Visual Loop Testing System:
 
 **Capabilities**:
 - **Real Authentication Flows** - OAuth, SAML, multi-factor auth testing
@@ -315,7 +315,7 @@ MIT License - See [LICENSE](LICENSE) file for details.
 "/maintenance" # Autonomous infrastructure updates and improvements
 
 # Example: Visual Testing
-"/visual" # Comprehensive visual testing with real authentication
+"/visual-testing" # Comprehensive visual testing with real authentication
 ```
 
 ---

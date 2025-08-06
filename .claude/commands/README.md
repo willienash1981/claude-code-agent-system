@@ -1,28 +1,32 @@
-# Claude Code Agent System - Slash Command
+# Claude Code Agent System - Slash Commands
 
-This directory contains the single Claude Code slash command for the agent system.
+This directory contains the Claude Code slash commands for the agent system.
 
-## Available Command
+## Available Commands
 
 - **`/maintenance`** - Complete system maintenance workflow (30-60 min, $2-4)
+- **`/visual-testing`** - Comprehensive visual testing with real authentication and production-like data
 
 ## Usage
 
 Simply type the slash command in Claude Code:
 ```bash
-/maintenance
+/maintenance          # System maintenance workflow
+/visual-testing       # Visual regression testing workflow
 ```
 
-This executes the complete system maintenance workflow using the existing 66+ agent ecosystem with system-evaluator validation to prevent breaking changes.
+These execute complete workflows using the existing 74+ agent ecosystem with system-evaluator validation to prevent breaking changes.
 
 ## Safety Features
 
-The command includes:
+Both commands include:
 - **system-evaluator validation** - Critical safety gate for all changes
 - **Human oversight** - You initiate and monitor the process  
-- **Cost estimate** - $2-4 in tokens, 30-60 minutes
+- **Cost estimates** - Token usage and time estimates provided
 - **Quality assurance** - Built-in testing and validation
 
 ## Implementation
 
-The command is implemented as `maintenance.md` which Claude Code automatically recognizes as a slash command.
+Commands are implemented as `.md` files which Claude Code automatically recognizes as slash commands:
+- `maintenance.md` → `/maintenance` 
+- `visual-testing.md` → `/visual-testing`
