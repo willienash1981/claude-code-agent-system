@@ -1,50 +1,54 @@
 #!/usr/bin/env python3
 """
 Claude Code Hook: user_prompt_submit
-Triggers when user submits a prompt - detects /maintenance and transforms it into agent-selector call
+Detects /maintenance commands and transforms them into agent-selector calls
 """
-# /// script
-# dependencies = ["requests"]
-# ///
 
 import sys
 import json
 import re
 
 def main():
-    # Read the hook payload from stdin
     try:
-        payload = json.loads(sys.stdin.read())
+        # Read the hook payload from stdin
+        input_data = sys.stdin.read().strip()
+        if not input_data:
+            sys.exit(0)
+            
+        payload = json.loads(input_data)
         prompt = payload.get('prompt', '').strip()
         
-        # Check if this is a maintenance command
-        if re.match(r'^/?maintenance\b', prompt.lower()):
-            # Transform the maintenance command into proper agent-selector workflow request
+        # Debug: write to stderr so we can see if hook is being called
+        print(f"Hook received prompt: {prompt[:50]}...", file=sys.stderr)
+        
+        # Check if this is a maintenance command (more flexible matching)
+        maintenance_patterns = [
+            r'^/?maintenance\b',
+            r'^maintenance$',
+            r'^/maintenance$'
+        ]
+        
+        is_maintenance = any(re.match(pattern, prompt.lower()) for pattern in maintenance_patterns)
+        
+        if is_maintenance:
+            print("Hook detected maintenance command - transforming...", file=sys.stderr)
+            
+            # Create the agent-selector request
             new_prompt = """Use agent-selector to create a comprehensive system maintenance workflow for the Claude Code Agent System.
 
-The workflow should include:
-- Phase 1: Research & Analysis (best-practices-researcher, agent-observability-platform)
-- Phase 2: Planning & Coordination (agent-ecosystem-manager, meta-agent-creator, system-evaluator)
-- Phase 3: Implementation (prompt-engineer, meta-agent-creator, code-reviewer) 
-- Phase 4: Testing & Deployment (agent-tester, agent-ecosystem-manager)
+The workflow should include research, analysis, planning, implementation, testing, and deployment phases using existing agents in proper sequence.
 
-Return a YAML workflow with all agents in proper sequence for comprehensive system maintenance, updates, and improvements."""
+Return a YAML workflow with all agents and tasks for comprehensive system maintenance."""
             
-            # Return JSON to replace the prompt
-            output = {
-                "decision": "approve",
-                "prompt_override": new_prompt,
-                "reason": "Transforming /maintenance command into proper agent-selector workflow request"
-            }
-            
-            print(json.dumps(output))
+            # Output the transformed prompt to stdout
+            print(new_prompt)
             sys.exit(0)
         
-        # For all other prompts, let them pass through normally
+        # For non-maintenance prompts, output nothing (let original prompt through)
         sys.exit(0)
         
     except Exception as e:
-        # If anything goes wrong, let the original prompt pass through
+        # Log error but don't block execution
         print(f"Hook error: {e}", file=sys.stderr)
         sys.exit(0)
 
