@@ -1,0 +1,36 @@
+{
+  "name": "quick-health-check", 
+  "description": "Quick system health assessment",
+  "version": "1.0.0",
+  "type": "workflow",
+  "trigger": {
+    "command": "/health",
+    "aliases": ["/check", "/status"],
+    "description": "Perform a quick health check of the agent system"
+  },
+  "workflow": {
+    "name": "Quick Health Check",
+    "description": "Fast assessment of system health and performance",
+    "estimated_duration": "5-10 minutes", 
+    "estimated_cost": "$0.50-1 in tokens",
+    "phases": [
+      {
+        "name": "System Assessment",
+        "agents": [
+          {
+            "agent": "agent-observability-platform",
+            "task": "Assess current system health, agent success rates, and identify any immediate issues",
+            "purpose": "Quick health check and performance assessment",
+            "expected_output": "System health summary and any urgent issues"
+          },
+          {
+            "agent": "agent-ecosystem-manager", 
+            "task": "Review health assessment and recommend any immediate actions if critical issues found",
+            "purpose": "Address any critical issues discovered in health check",
+            "expected_output": "Immediate action recommendations or all-clear status"
+          }
+        ]
+      }
+    ]
+  }
+}

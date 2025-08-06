@@ -2,26 +2,34 @@
 
 🎉 **PRODUCTION READY**: A comprehensive AI orchestration system for Claude Code with **66+ specialized agents** covering every aspect of software development and business operations. Features self-maintaining architecture, automated evolution, and enterprise-grade governance.
 
-## 🔄 Manual Self-Maintenance
+## 🔄 Self-Maintenance with Slash Commands
 
-This system **can maintain and update itself** when triggered by a simple prompt:
+This system **can maintain and update itself** using convenient slash commands:
 
-**Trigger**: `"Execute system maintenance workflow for the Claude Code Agent System"`
+### **⚡ Quick Commands**
+- **`/maintenance`** - Complete system maintenance workflow (30-60 min, $2-4)
+- **`/health`** - Quick system health check (5-10 min, $0.50-1)  
+- **`/research`** - Research improvements only (10-15 min, $1-2)
+- **`/create-agent`** - Create new specialized agent (15-20 min, $1-3)
 
-**How it works**:
-- Uses existing specialized agents in coordinated workflow
+### **🔄 Full Maintenance Workflow**
+The `/maintenance` command executes:
 - **best-practices-researcher** finds latest improvements  
 - **agent-ecosystem-manager** coordinates system updates
-- **meta-agent-creator** builds new agents for gaps
+- **system-evaluator** validates all changes (CRITICAL SAFETY GATE)
+- **meta-agent-creator** builds new agents for approved gaps
 - **agent-tester** validates all changes
 - Updates are tested, documented, and released automatically
 
-**Benefits**:
+### **🛡️ Safety Features**
+- ✅ **system-evaluator** prevents breaking changes
 - ✅ Human-triggered with full oversight
+- ✅ Common sense validation for all proposals
 - ✅ No redundant capabilities - uses existing agents
-- ✅ Comprehensive system improvements in 30-60 minutes  
-- ✅ Maintains architectural integrity
-- ✅ Results in updated system with latest best practices
+- ✅ Rollback capability if issues arise
+
+### **📝 Traditional Prompt Alternative**
+If slash commands aren't available: `"Execute system maintenance workflow for the Claude Code Agent System"`
 
 ## 🌟 Complete Agent Ecosystem
 

@@ -1,0 +1,43 @@
+# Claude Code Configuration - Agent System Hooks
+
+## Slash Commands
+
+### /maintenance
+Execute complete system maintenance workflow
+- Research improvements and assess health
+- Plan changes with common sense validation  
+- Implement only approved changes
+- Test and deploy improvements
+
+### /health  
+Quick system health assessment
+- Fast performance check
+- Identify immediate issues
+- Recommend urgent actions
+
+### /research
+Research latest improvements (no changes made)
+- Discover industry trends
+- Identify opportunities
+- Generate improvement ideas
+
+### /create-agent
+Create new agent for specific requirements
+- Design specialized agent
+- Validate with system-evaluator
+- Test and integrate
+
+## Configuration Files
+Hook definitions located in `/hooks/` directory:
+- maintenance.json
+- health-check.json  
+- research.json
+- create-agent.json
+
+## Safety Features
+All commands include:
+- system-evaluator validation gate
+- Human oversight required
+- Cost estimates provided
+- Rollback capability
+- Quality assurance built-in

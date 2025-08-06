@@ -1,0 +1,31 @@
+{
+  "name": "research-improvements",
+  "description": "Research latest improvements without implementing them",
+  "version": "1.0.0", 
+  "type": "workflow",
+  "trigger": {
+    "command": "/research",
+    "aliases": ["/discover", "/trends"],
+    "description": "Research latest development trends and improvement opportunities"
+  },
+  "workflow": {
+    "name": "Research Only Workflow",
+    "description": "Discover improvements and trends without making any system changes",
+    "estimated_duration": "10-15 minutes",
+    "estimated_cost": "$1-2 in tokens", 
+    "phases": [
+      {
+        "name": "Research Phase",
+        "agents": [
+          {
+            "agent": "best-practices-researcher",
+            "task": "Research latest development trends, tools, and patterns that could improve our agent system",
+            "purpose": "Identify improvement opportunities and industry changes",
+            "expected_output": "Research findings and recommendations for future consideration"
+          }
+        ]
+      }
+    ]
+  },
+  "note": "This workflow only researches and reports - no changes are made to the system"
+}

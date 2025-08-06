@@ -1,0 +1,120 @@
+{
+  "name": "maintenance",
+  "description": "Execute system maintenance workflow using existing agents",
+  "version": "1.0.0",
+  "type": "workflow",
+  "trigger": {
+    "command": "/maintenance",
+    "aliases": ["/update", "/self-update", "/maintain"],
+    "description": "Execute the complete system maintenance workflow"
+  },
+  "workflow": {
+    "name": "System Maintenance Workflow", 
+    "description": "Uses existing agents in sequence to maintain and update the agent system",
+    "estimated_duration": "30-60 minutes",
+    "estimated_cost": "$2-4 in tokens",
+    "phases": [
+      {
+        "name": "Research & Analysis",
+        "description": "Discover improvements and assess current system health",
+        "agents": [
+          {
+            "agent": "best-practices-researcher",
+            "task": "Research latest development trends, tools, and patterns that could improve our agent system",
+            "purpose": "Identify improvement opportunities and industry changes",
+            "expected_output": "Research findings and recommendations"
+          },
+          {
+            "agent": "agent-observability-platform",
+            "task": "Analyze current system performance, agent success rates, and identify bottlenecks", 
+            "purpose": "Assess current system health and performance",
+            "expected_output": "Performance metrics and system health report"
+          }
+        ]
+      },
+      {
+        "name": "Planning & Coordination",
+        "description": "Create improvement plan and validate all proposed changes",
+        "agents": [
+          {
+            "agent": "agent-ecosystem-manager",
+            "task": "Review research findings and performance data, create improvement plan",
+            "purpose": "Coordinate system-wide improvements and maintain architectural integrity",
+            "expected_output": "System improvement plan and priority list"
+          },
+          {
+            "agent": "meta-agent-creator", 
+            "task": "Identify gaps where new agents are needed based on improvement plan",
+            "purpose": "Determine if new specialized agents should be created",
+            "expected_output": "New agent specifications or modification requirements"
+          },
+          {
+            "agent": "system-evaluator",
+            "task": "Apply common sense validation to all proposed changes and improvements",
+            "purpose": "CRITICAL SAFETY GATE - Prevent well-intentioned changes from breaking the working system",
+            "expected_output": "Approved, rejected, or modified proposals with detailed rationale",
+            "critical": true,
+            "blocking": true
+          }
+        ]
+      },
+      {
+        "name": "Implementation",
+        "description": "Execute only approved changes with quality assurance",
+        "condition": "Only proceed with changes approved by system-evaluator",
+        "agents": [
+          {
+            "agent": "prompt-engineer",
+            "task": "Optimize existing agent prompts based on APPROVED improvements only",
+            "purpose": "Improve agent performance using validated enhancements",
+            "expected_output": "Updated agent specifications with enhanced prompts"
+          },
+          {
+            "agent": "meta-agent-creator",
+            "task": "Create APPROVED new agents only (rejected proposals are not implemented)",
+            "purpose": "Extend system capabilities for validated requirements only", 
+            "expected_output": "New agent files and specifications for approved agents"
+          },
+          {
+            "agent": "code-reviewer",
+            "task": "Review all APPROVED agent modifications for quality and consistency",
+            "purpose": "Ensure high quality and maintain system standards",
+            "expected_output": "Validated agent updates and quality assessment"
+          }
+        ]
+      },
+      {
+        "name": "Testing & Deployment", 
+        "description": "Validate changes and deploy to production",
+        "agents": [
+          {
+            "agent": "agent-tester",
+            "task": "Test all APPROVED modified and new agents for functionality",
+            "purpose": "Validate system works properly after validated updates",
+            "expected_output": "Test results and validation report"
+          },
+          {
+            "agent": "agent-ecosystem-manager",
+            "task": "Deploy APPROVED and TESTED changes, update system documentation, commit changes, and create release",
+            "purpose": "Deploy validated improvements and update system version",
+            "expected_output": "Updated documentation, Git commits, and new release"
+          }
+        ]
+      }
+    ]
+  },
+  "safety_features": {
+    "critical_gate": "system-evaluator must approve all changes before implementation",
+    "rollback_capability": "Changes can be reverted if issues arise",
+    "human_oversight": "User initiates and monitors the entire process",
+    "quality_assurance": "Built-in testing and validation at each phase"
+  },
+  "expected_outcomes": [
+    "System updated with latest industry best practices",
+    "Performance bottlenecks identified and resolved",
+    "New agents created for identified capability gaps", 
+    "Existing agents optimized and improved",
+    "Documentation updated and system released to GitHub",
+    "All changes tested and validated"
+  ]
+}
