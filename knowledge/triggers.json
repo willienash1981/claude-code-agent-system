@@ -15,5 +15,14 @@
       "action": "require_governance_approval",
       "mandatory": true
     }
+  ],
+  "slash_commands": [
+    {
+      "command": "/visual",
+      "description": "Trigger comprehensive visual testing workflow",
+      "agent": "visual-testing-orchestrator",
+      "example": "/visual - Sets up complete visual testing with real auth and production-like data",
+      "category": "testing"
+    }
   ]
 }

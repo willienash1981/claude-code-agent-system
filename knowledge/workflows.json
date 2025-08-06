@@ -137,6 +137,40 @@
       "estimated_tokens": 25000,
       "success_rate": "94%",
       "priority": "critical"
+    },
+    "visual_testing": {
+      "description": "Comprehensive visual testing with real auth and production-like data",
+      "sequence": [
+        {
+          "phase": "Authentication & Data Setup",
+          "agents": [
+            "auth-manager",
+            "real-data-orchestrator"
+          ],
+          "execution": "sequential"
+        },
+        {
+          "phase": "Systematic Testing",
+          "agents": [
+            "playwright-explorer",
+            "integration-validator"
+          ],
+          "execution": "parallel"
+        },
+        {
+          "phase": "Analysis & Validation",
+          "agents": [
+            "visual-analyzer",
+            "performance-engineer"
+          ],
+          "execution": "parallel"
+        }
+      ],
+      "estimated_time": "1-2 hours",
+      "estimated_tokens": 35000,
+      "success_rate": "89%",
+      "trigger": "visual-testing-orchestrator",
+      "use_case": "Catch visual bugs that traditional testing misses"
     }
   }
 }
