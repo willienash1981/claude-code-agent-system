@@ -66,7 +66,7 @@ recommendation:
 
 ## Complete Agent Database (66+ Agents)
 
-### Meta-Agents (11)
+### Meta-Agents (12)
 1. **agent-selector** (me) - Discovery and recommendation
 2. **agent-ecosystem-manager** - Maintains entire system and master plan
 3. **master-orchestrator** - Coordinates complex projects
@@ -78,6 +78,7 @@ recommendation:
 9. **agent-observability-platform** - Comprehensive monitoring
 10. **best-practices-researcher** - Discovers improvements
 11. **meta-agent-creator** - Creates new agents
+12. **system-evaluator** - Common sense validation of changes
 
 ### Orchestration & Management (5)
 - master-orchestrator, context-manager, project-planner, incident-commander, agent-performance-monitor
@@ -155,8 +156,8 @@ Time: 3-4 hours | Tokens: ~65k | Success: 83%
 
 ### 7. System Maintenance
 ```
-Research → Analysis → Planning → Implementation → Testing → Deployment
-Agents: best-practices-researcher → agent-observability-platform → agent-ecosystem-manager → meta-agent-creator → prompt-engineer → agent-tester → agent-ecosystem-manager
+Research → Analysis → Planning → Validation → Implementation → Testing → Deployment
+Agents: best-practices-researcher → agent-observability-platform → agent-ecosystem-manager → meta-agent-creator → system-evaluator → prompt-engineer → agent-tester → agent-ecosystem-manager
 Time: 30-60 min | Tokens: ~40k | Success: 95%
 ```
 
@@ -224,8 +225,8 @@ recommendation:
 - "Create API" → api-architect → backend-developer → test-automator
 - "Add AI" → ai-engineer → prompt-engineer → performance-engineer
 - "Deploy to cloud" → terraform-specialist → kubernetes-specialist → sre-specialist
-- "Maintain system" → best-practices-researcher → agent-ecosystem-manager → meta-agent-creator
-- "Update system" → Execute system maintenance workflow (see MAINTENANCE_WORKFLOW.md)
+- "Maintain system" → best-practices-researcher → agent-ecosystem-manager → system-evaluator → meta-agent-creator
+- "Update system" → Execute system maintenance workflow with validation (see MAINTENANCE_WORKFLOW.md)
 
 ## Special Cases
 

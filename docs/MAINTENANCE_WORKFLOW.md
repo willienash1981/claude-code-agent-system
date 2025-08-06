@@ -36,41 +36,104 @@ step_4:
   task: "Identify gaps where new agents are needed based on improvement plan"
   purpose: "Determine if new specialized agents should be created"
   output: "New agent specifications or modification requirements"
+
+step_5:
+  agent: "system-evaluator"
+  task: "Apply common sense validation to all proposed changes and improvements"
+  purpose: "Prevent well-intentioned changes from breaking the working system"
+  output: "Approved, rejected, or modified proposals with detailed rationale"
 ```
 
-### Phase 3: Implementation
+### Phase 3: Implementation (APPROVED CHANGES ONLY)
 ```yaml
-step_5:
+step_6:
   agent: "prompt-engineer"
-  task: "Optimize existing agent prompts based on best practices research"
-  purpose: "Improve agent performance and capabilities"
+  task: "Optimize existing agent prompts based on APPROVED improvements only"
+  purpose: "Improve agent performance using validated enhancements"
   output: "Updated agent specifications with enhanced prompts"
 
-step_6:
-  agent: "meta-agent-creator"  
-  task: "Create any new agents identified in the planning phase"
-  purpose: "Extend system capabilities for new requirements"
-  output: "New agent files and specifications"
-
 step_7:
+  agent: "meta-agent-creator"  
+  task: "Create APPROVED new agents only (rejected proposals are not implemented)"
+  purpose: "Extend system capabilities for validated requirements only"
+  output: "New agent files and specifications for approved agents"
+
+step_8:
   agent: "code-reviewer"
-  task: "Review all agent modifications for quality and consistency"
+  task: "Review all APPROVED agent modifications for quality and consistency"
   purpose: "Ensure high quality and maintain system standards"
   output: "Validated agent updates and quality assessment"
 ```
 
 ### Phase 4: Testing & Deployment
 ```yaml
-step_8:
+step_9:
   agent: "agent-tester"
-  task: "Test all modified and new agents for functionality"
-  purpose: "Validate system works properly after updates"
+  task: "Test all APPROVED modified and new agents for functionality"
+  purpose: "Validate system works properly after validated updates"
   output: "Test results and validation report"
 
-step_9:
+step_10:
   agent: "agent-ecosystem-manager"
-  task: "Update system documentation, commit changes, and create release"
-  purpose: "Deploy improvements and update system version"
+  task: "Deploy APPROVED and TESTED changes, update system documentation, commit changes, and create release"
+  purpose: "Deploy validated improvements and update system version"
+  output: "Updated documentation, Git commits, and new release"
+```
+
+### Phase 2: Planning & Coordination  
+```yaml
+step_3:
+  agent: "agent-ecosystem-manager"
+  task: "Review research findings and performance data, create improvement plan"
+  purpose: "Coordinate system-wide improvements and maintain architectural integrity" 
+  output: "System improvement plan and priority list"
+
+step_4:
+  agent: "meta-agent-creator"
+  task: "Identify gaps where new agents are needed based on improvement plan"
+  purpose: "Determine if new specialized agents should be created"
+  output: "New agent specifications or modification requirements"
+
+step_5:
+  agent: "system-evaluator"
+  task: "Apply common sense validation to all proposed changes and improvements"
+  purpose: "Prevent well-intentioned changes from breaking the working system"
+  output: "Approved, rejected, or modified proposals with detailed rationale"
+```
+
+### Phase 3: Implementation
+```yaml
+step_6:
+  agent: "prompt-engineer"
+  task: "Optimize existing agent prompts based on APPROVED improvements only"
+  purpose: "Improve agent performance using validated enhancements"
+  output: "Updated agent specifications with enhanced prompts"
+
+step_7:
+  agent: "meta-agent-creator"  
+  task: "Create APPROVED new agents only (rejected proposals are not implemented)"
+  purpose: "Extend system capabilities for validated requirements only"
+  output: "New agent files and specifications for approved agents"
+
+step_8:
+  agent: "code-reviewer"
+  task: "Review all APPROVED agent modifications for quality and consistency"
+  purpose: "Ensure high quality and maintain system standards"
+  output: "Validated agent updates and quality assessment"
+```
+
+### Phase 4: Testing & Deployment
+```yaml
+step_9:
+  agent: "agent-tester"
+  task: "Test all APPROVED modified and new agents for functionality"
+  purpose: "Validate system works properly after validated updates"
+  output: "Test results and validation report"
+
+step_10:
+  agent: "agent-ecosystem-manager"
+  task: "Deploy APPROVED and TESTED changes, update system documentation, commit changes, and create release"
+  purpose: "Deploy validated improvements and update system version"
   output: "Updated documentation, Git commits, and new release"
 ```
 
