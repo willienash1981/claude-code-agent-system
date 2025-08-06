@@ -1,38 +1,28 @@
-# Claude Code Agent System - Slash Commands
+# Claude Code Agent System - Slash Command
 
-This directory contains Claude Code slash commands for the agent system maintenance and operations.
+This directory contains the single Claude Code slash command for the agent system.
 
-## Available Commands
+## Available Command
 
 - **`/maintenance`** - Complete system maintenance workflow (30-60 min, $2-4)
-- **`/update`** - Alias for maintenance workflow  
-- **`/self-update`** - Alternative maintenance trigger
-- **`/health`** - Quick system health check (5-10 min, $0.50-1)
-- **`/status`** - Alias for health check
-- **`/research`** - Research improvements only (10-15 min, $1-2)
-- **`/create-agent`** - Create new specialized agent (15-20 min, $1-3)
 
 ## Usage
 
 Simply type the slash command in Claude Code:
 ```bash
 /maintenance
-/health  
-/research
-/create-agent "Need an agent for API documentation generation"
 ```
+
+This executes the complete system maintenance workflow using the existing 66+ agent ecosystem with system-evaluator validation to prevent breaking changes.
 
 ## Safety Features
 
-All commands include:
+The command includes:
 - **system-evaluator validation** - Critical safety gate for all changes
-- **Human oversight** - You initiate and monitor all processes  
-- **Cost estimates** - Know exactly what you'll spend upfront
-- **Duration estimates** - Plan your time accordingly
+- **Human oversight** - You initiate and monitor the process  
+- **Cost estimate** - $2-4 in tokens, 30-60 minutes
 - **Quality assurance** - Built-in testing and validation
 
-## Command Details
+## Implementation
 
-Each command is implemented as a Markdown file that Claude Code automatically recognizes. The commands orchestrate the existing 66+ agent ecosystem to perform specific maintenance and operational tasks.
-
-See individual `.md` files for detailed instructions and expected outcomes.
+The command is implemented as `maintenance.md` which Claude Code automatically recognizes as a slash command.
