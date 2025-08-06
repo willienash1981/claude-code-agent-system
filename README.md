@@ -2,17 +2,14 @@
 
 🎉 **PRODUCTION READY**: A comprehensive AI orchestration system for Claude Code with **66+ specialized agents** covering every aspect of software development and business operations. Features self-maintaining architecture, automated evolution, and enterprise-grade governance.
 
-## 🔄 Self-Maintenance with Slash Commands
+## 🔄 Self-Maintenance with Slash Command
 
-This system **can maintain and update itself** using convenient slash commands:
+This system **can maintain and update itself** using a simple slash command:
 
-### **⚡ Quick Commands**
+### **⚡ Command**
 - **`/maintenance`** - Complete system maintenance workflow (30-60 min, $2-4)
-- **`/health`** - Quick system health check (5-10 min, $0.50-1)  
-- **`/research`** - Research improvements only (10-15 min, $1-2)
-- **`/create-agent`** - Create new specialized agent (15-20 min, $1-3)
 
-### **🔄 Full Maintenance Workflow**
+### **🔄 How It Works**
 The `/maintenance` command executes:
 - **best-practices-researcher** finds latest improvements  
 - **agent-ecosystem-manager** coordinates system updates
