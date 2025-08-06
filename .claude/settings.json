@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "user_prompt_submit": [".claude/hooks/user_prompt_submit.py"],
+    "pre_tool_use": [],
+    "post_tool_use": [],
+    "notification": [],
+    "stop": [],
+    "subagent_stop": []
+  },
+  "allow_hooks": true,
+  "hook_timeout": 60
+}
