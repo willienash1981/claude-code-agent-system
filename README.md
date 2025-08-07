@@ -318,6 +318,23 @@ MIT License - See [LICENSE](LICENSE) file for details.
 "/visual-testing" # Comprehensive visual testing with real authentication
 ```
 
+## Troubleshooting
+
+If you encounter issues like "Agent type 'X' not found" errors:
+
+1. **Quick Fix**: Run the diagnostic script
+   ```bash
+   cd ~/Desktop/claude-code-agent-system
+   ./scripts/fix_missing_agents.sh
+   ```
+
+2. **Full Documentation**: See [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) for detailed solutions
+
+3. **Common Issues**:
+   - Missing agents (sync repository with installed version)
+   - JSON syntax errors in workflows.json
+   - Agent count mismatches between versions
+
 ---
 
 **Version**: 2.3.0 - GO Status Achieved with 74+ Agent Ecosystem
